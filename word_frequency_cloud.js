@@ -73,7 +73,7 @@
   };
   
   var scaleWordLength = function (map, list) {
-    var values = objectToValuesg(map, list);
+    var values = objectToValues(map, list);
     values.sort(numSort);
     
     return numScale(
