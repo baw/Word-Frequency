@@ -44,7 +44,7 @@
       var div = document.createElement("div");
       div.style.fontSize = scaler(num) + "px";
       
-      div.textContent = word + " : " + num;
+      div.textContent = word;
       
       html.appendChild(div);
     }
