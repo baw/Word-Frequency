@@ -2,13 +2,18 @@
   var MAX_FONT_SIZE = 35;
   var MIN_FONT_SIZE = 1;
   var words = {};
+  var nodesToSkip = {
+    "STYLE": true
+  };
   
   var traverseDOM = function (elm, cb) {
     cb(elm);
     
     elm = elm.firstChild;
     while (elm) {
-      traverseDOM(elm, cb);
+      if (!nodesToSkip[elm.nodeName]) {
+        traverseDOM(elm, cb);
+      }
       elm = elm.nextSibling;
     }
   };
