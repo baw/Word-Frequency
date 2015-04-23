@@ -3,6 +3,7 @@
   var MIN_FONT_SIZE = 1;
   var words = {};
   var nodesToSkip = {
+    "SCRIPT": true,
     "STYLE": true
   };
   
